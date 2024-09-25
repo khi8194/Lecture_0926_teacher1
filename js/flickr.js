@@ -29,31 +29,30 @@ fetch(url)
     list.innerHTML = tags;
   });
 
-//미션1 - 현재 img.thumb을 클릭시 레이어모달이 생성됨 처리
-//미션2 - 동적으로 생성된 레이어팝업의 닫기버튼 클릭시 레이어모달 제거
-//미션3 - img.thumb의 alt속성에 숨겨놓은 큰해상도의 이미지 url을 레이어모달 안에 출력
-
+//body요소에 클릭했을때 클릭한요소의 클래스명을 구분자로 설정
+//특정 요소에 특정 함수 연결
 document.body.addEventListener("click", (e) => {
-  if (e.target.className === "thumb") {
-    console.log(e.target);
+  if (e.target.className === "thumb") createModal(e);
+  if (e.target.className === "btnClose") removeModal();
+});
 
-    const imgSrc = e.target.getAttribute("alt");
+//모달생성 함수
+function createModal(e) {
+  const imgSrc = e.target.getAttribute("alt");
 
-    const modal = document.createElement("aside");
-    modal.classList.add("modal");
-    modal.innerHTML = `
+  const modal = document.createElement("aside");
+  modal.classList.add("modal");
+  modal.innerHTML = `
       <div class='con'>
         <img src=${imgSrc} />
       </div>
       <button class='btnClose'>CLOSE</button>
     `;
 
-    document.body.append(modal);
-  }
-});
+  document.body.append(modal);
+}
 
-document.body.addEventListener("click", (e) => {
-  if (e.target.className === "btnClose") {
-    document.querySelector(".modal").remove();
-  }
-});
+//모달 제거함수
+function removeModal() {
+  document.querySelector(".modal").remove();
+}
