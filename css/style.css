@@ -16,6 +16,12 @@ a {
   color: inherit;
 }
 
+.hide {
+  position: absolute;
+  top: -999999px;
+  opacity: 0;
+}
+
 main {
   width: 100%;
   padding: 10vh 10vw;
@@ -25,14 +31,18 @@ main h1 {
   color: #555;
   margin-bottom: 60px;
 }
-main nav {
+main .controls {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+main .controls nav {
   margin-bottom: 40px;
   display: flex;
-  width: 100%;
   flex-wrap: wrap;
   gap: 20px;
 }
-main nav button {
+main .controls nav button {
   display: inline-block;
   padding: 10px 20px;
   border-radius: 5px;
@@ -43,17 +53,35 @@ main nav button {
   opacity: 0.8;
   transition: 0.5s;
 }
-main nav button:hover {
+main .controls nav button:hover {
   transform: scale(1.2);
   opacity: 1;
 }
-main nav button:nth-of-type(1) {
+main .controls nav button:nth-of-type(1) {
   background: linear-gradient(45deg, aqua, #49d3fd);
   box-shadow: 10px 10px 20px rgba(0, 255, 255, 0.5);
 }
-main nav button:nth-of-type(2) {
+main .controls nav button:nth-of-type(2) {
   background: linear-gradient(45deg, hotpink, #df21df);
   box-shadow: 10px 10px 20px rgba(255, 0, 234, 0.5);
+}
+main .controls article input {
+  padding: 4px 7px;
+  border: 1px solid #bbb;
+  border-radius: 3px;
+}
+main .controls article button {
+  width: 100px;
+  height: 25px;
+  background: #444;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+  font: 0.6rem/25px "orbitron";
+  color: #fff;
+  text-align: center;
+  border: none;
+  position: relative;
+  top: -1px;
+  border-radius: 3px;
 }
 main .list {
   width: 100%;
