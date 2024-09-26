@@ -1,31 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="css/style.css" />
-    <script type="module" src="js/flickr.js"></script>
-  </head>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<link rel="stylesheet" href="css/style.css" />
+		<script type="module" src="js/flickr.js"></script>
+	</head>
 
-  <body>
-    <main>
-      <h1>FLICKR GALLERY</h1>
+	<body>
+		<main>
+			<h1>FLICKR GALLERY</h1>
 
-      <section class="controls">
-        <nav>
-          <button>My Gallery</button>
-          <button>Popular Gallery</button>
-        </nav>
+			<section class="controls">
+				<nav>
+					<button>My Gallery</button>
+					<button>Popular Gallery</button>
+				</nav>
 
-        <article class="searchBox">
-          <label for="search" class="hide">검색어 입력</label>
-          <input type="text" id="search" />
-          <button>Search</button>
-        </article>
-      </section>
+				<!-- form요소에 action에 전달될 타겟위치를 지정한뒤 내부적이로 click이나 enter를 입력하면 자동으로 안쪽 안쪽 폼요소의 값들을 action에 지정된 타겟위치로 전달해주는 submit이벤트 발생 -->
+				<form class="searchBox" action="/">
+					<label for="search" class="hide">검색어 입력</label>
+					<input type="text" id="search" />
+					<button>Search</button>
+				</form>
+			</section>
 
-      <ul class="list"></ul>
-    </main>
-  </body>
+			<ul class="list"></ul>
+		</main>
+	</body>
 </html>

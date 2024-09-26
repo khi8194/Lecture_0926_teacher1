@@ -65,12 +65,12 @@ main .controls nav button:nth-of-type(2) {
   background: linear-gradient(45deg, hotpink, #df21df);
   box-shadow: 10px 10px 20px rgba(255, 0, 234, 0.5);
 }
-main .controls article input {
+main .controls .searchBox input {
   padding: 4px 7px;
   border: 1px solid #bbb;
   border-radius: 3px;
 }
-main .controls article button {
+main .controls .searchBox button {
   width: 80px;
   height: 25px;
   background: #444;

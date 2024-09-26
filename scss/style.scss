@@ -2,207 +2,207 @@
 @import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
 
 main {
-  width: 100%;
-  padding: 10vh 10vw;
+	width: 100%;
+	padding: 10vh 10vw;
 
-  h1 {
-    font: 100 7vmax/1 "raleway";
-    color: #555;
-    margin-bottom: 60px;
-  }
+	h1 {
+		font: 100 7vmax/1 "raleway";
+		color: #555;
+		margin-bottom: 60px;
+	}
 
-  .controls {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+	.controls {
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
 
-    nav {
-      margin-bottom: 40px;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
+		nav {
+			margin-bottom: 40px;
+			display: flex;
+			flex-wrap: wrap;
+			gap: 20px;
 
-      button {
-        display: inline-block;
-        padding: 10px 20px;
-        border-radius: 5px;
-        border: none;
-        cursor: pointer;
-        font: 500 0.6rem/1 "orbitron";
-        color: #fff;
-        opacity: 0.8;
-        transition: 0.5s;
+			button {
+				display: inline-block;
+				padding: 10px 20px;
+				border-radius: 5px;
+				border: none;
+				cursor: pointer;
+				font: 500 0.6rem/1 "orbitron";
+				color: #fff;
+				opacity: 0.8;
+				transition: 0.5s;
 
-        &:hover {
-          transform: scale(1.2);
-          opacity: 1;
-        }
+				&:hover {
+					transform: scale(1.2);
+					opacity: 1;
+				}
 
-        &:nth-of-type(1) {
-          background: linear-gradient(45deg, aqua, #49d3fd);
-          box-shadow: 10px 10px 20px rgba(0, 255, 255, 0.5);
-        }
-        &:nth-of-type(2) {
-          background: linear-gradient(45deg, hotpink, #df21df);
-          box-shadow: 10px 10px 20px rgba(255, 0, 234, 0.5);
-        }
-      }
-    }
+				&:nth-of-type(1) {
+					background: linear-gradient(45deg, aqua, #49d3fd);
+					box-shadow: 10px 10px 20px rgba(0, 255, 255, 0.5);
+				}
+				&:nth-of-type(2) {
+					background: linear-gradient(45deg, hotpink, #df21df);
+					box-shadow: 10px 10px 20px rgba(255, 0, 234, 0.5);
+				}
+			}
+		}
 
-    article {
-      input {
-        padding: 4px 7px;
-        border: 1px solid #bbb;
-        border-radius: 3px;
-      }
+		.searchBox {
+			input {
+				padding: 4px 7px;
+				border: 1px solid #bbb;
+				border-radius: 3px;
+			}
 
-      button {
-        width: 80px;
-        height: 25px;
-        background: #444;
-        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
-        font: 600 0.6rem/25px "orbitron";
-        color: #fff;
-        text-align: center;
-        border: none;
-        position: relative;
-        top: -1px;
-        border-radius: 3px;
-        letter-spacing: 1px;
-      }
-    }
-  }
+			button {
+				width: 80px;
+				height: 25px;
+				background: #444;
+				box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+				font: 600 0.6rem/25px "orbitron";
+				color: #fff;
+				text-align: center;
+				border: none;
+				position: relative;
+				top: -1px;
+				border-radius: 3px;
+				letter-spacing: 1px;
+			}
+		}
+	}
 
-  .list {
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+	.list {
+		width: 100%;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
 
-    li {
-      width: 22%;
-      margin-bottom: 70px;
+		li {
+			width: 22%;
+			margin-bottom: 70px;
 
-      .pic {
-        width: 100%;
-        height: 20vw;
-        overflow: hidden;
+			.pic {
+				width: 100%;
+				height: 20vw;
+				overflow: hidden;
 
-        img {
-          width: 100%;
-          height: 100%;
-          object-fit: cover;
-        }
-      }
+				img {
+					width: 100%;
+					height: 100%;
+					object-fit: cover;
+				}
+			}
 
-      h2 {
-        border-top: 1px solid #bbb;
-        border-bottom: 1px solid #bbb;
-        margin: 14px 0px;
-        padding: 14px 0px;
-        font: 300 0.8rem/1.2 "raleway";
-        color: #222;
-      }
+			h2 {
+				border-top: 1px solid #bbb;
+				border-bottom: 1px solid #bbb;
+				margin: 14px 0px;
+				padding: 14px 0px;
+				font: 300 0.8rem/1.2 "raleway";
+				color: #222;
+			}
 
-      .profile {
-        width: 100%;
-        display: flex;
-        align-items: flex-end;
-        gap: 10px;
+			.profile {
+				width: 100%;
+				display: flex;
+				align-items: flex-end;
+				gap: 10px;
 
-        img {
-          width: 30px;
-        }
-        span {
-          font: 300 0.5rem/1 "orbitron";
-          color: orange;
-          cursor: pointer;
-          display: inline-block;
-          transition: 0.5s;
+				img {
+					width: 30px;
+				}
+				span {
+					font: 300 0.5rem/1 "orbitron";
+					color: orange;
+					cursor: pointer;
+					display: inline-block;
+					transition: 0.5s;
 
-          &:hover {
-            color: hotpink;
-            transform: scale(1.1);
-          }
-        }
-      }
-    }
-  }
+					&:hover {
+						color: hotpink;
+						transform: scale(1.1);
+					}
+				}
+			}
+		}
+	}
 }
 
 .modal {
-  position: fixed;
-  top: 0px;
-  left: 0px;
-  width: 100%;
-  height: 100vh;
-  background-color: rgba(255, 255, 255, 0.8);
-  backdrop-filter: blur(10px);
-  padding: 100px;
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100vh;
+	background-color: rgba(255, 255, 255, 0.8);
+	backdrop-filter: blur(10px);
+	padding: 100px;
 
-  .con {
-    width: 100%;
-    height: 100%;
+	.con {
+		width: 100%;
+		height: 100%;
 
-    img {
-      width: 100%;
-      height: 100%;
-      object-fit: contain;
-    }
-  }
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: contain;
+		}
+	}
 
-  .btnClose {
-    cursor: pointer;
-    border: none;
-    background-color: transparent;
-    color: #555;
-    position: absolute;
-    top: 40px;
-    right: 40px;
-  }
+	.btnClose {
+		cursor: pointer;
+		border: none;
+		background-color: transparent;
+		color: #555;
+		position: absolute;
+		top: 40px;
+		right: 40px;
+	}
 }
 
 @media screen and (max-width: 999px) {
-  main {
-    .list {
-      li {
-        width: 32%;
+	main {
+		.list {
+			li {
+				width: 32%;
 
-        .pic {
-          height: 30vw;
-        }
-      }
-    }
-  }
+				.pic {
+					height: 30vw;
+				}
+			}
+		}
+	}
 }
 
 @media screen and (max-width: 699px) {
-  main {
-    .list {
-      li {
-        width: 48%;
+	main {
+		.list {
+			li {
+				width: 48%;
 
-        .pic {
-          height: 50vw;
-        }
-      }
-    }
-  }
+				.pic {
+					height: 50vw;
+				}
+			}
+		}
+	}
 }
 
 @media screen and (max-width: 399px) {
-  main {
-    h1 {
-      font-size: 5vmax;
-    }
-    .list {
-      li {
-        width: 100%;
+	main {
+		h1 {
+			font-size: 5vmax;
+		}
+		.list {
+			li {
+				width: 100%;
 
-        .pic {
-          height: 60vw;
-        }
-      }
-    }
-  }
+				.pic {
+					height: 60vw;
+				}
+			}
+		}
+	}
 }
