@@ -12,15 +12,13 @@ btnPopular.addEventListener("click", () => fetchFlickr("interest"));
 document.body.addEventListener("click", (e) => {
   if (e.target.className === "thumb") createModal(e);
   if (e.target.className === "btnClose") removeModal();
+  //목록에서 사용자 프로필 아이디 클릭시 클릭한 span요소의 사용자 아이디 텍스트값을 fetchFlickr의 인수로 전달해 호출
+  if (e.target.className === "userID") fetchFlickr(e.target.innerText);
 });
 
 //flickr fetching함수
 function fetchFlickr(type) {
-  //인수로 전달된 type정보와 현재 출력되고 있는 dataType이 동일하면
-  //다시 data fetching할 필요가 없으므로  return으로 강제 함수 종료
-  //만약 타입이 다르면 해당 if문 무시
   if (type === dataType) return;
-  //인수로 전달된 타입명으로 현재 dataType을 변경
   dataType = type;
 
   const api_key = "21e294ad0ec03a32d7355980457d9e11";
@@ -29,8 +27,14 @@ function fetchFlickr(type) {
   const method_mine = "flickr.people.getPhotos";
   const method_interest = "flickr.interestingness.getList";
   let url_mine = `${baseURL}${method_mine}&user_id=${myID}&nojsoncallback=1&format=json`;
+  //type으로 특정사용자의 ID값을 전달 받은뒤 user_id쿼리에 연결하면 해당 사용자의 갤러리를 호출하는 요청 URL생성
+  let url_user = `${baseURL}${method_mine}&user_id=${type}&nojsoncallback=1&format=json`;
   let url_interest = `${baseURL}${method_interest}&nojsoncallback=1&format=json`;
-  let result_url = type === "mine" ? url_mine : url_interest;
+  let result_url = "";
+  if (type === "mine") result_url = url_mine;
+  else if (type === "interest") result_url = url_interest;
+  //type이 mine, interest가 아니면 특정 사용자 ID일테니 url_user요청 아이디를 result_url에 담아서 fetch함수에 전달
+  else result_url = url_user;
 
   fetch(result_url)
     .then((data) => data.json())
@@ -54,7 +58,7 @@ function createList(dataArr) {
           <h2>${pic.title}</h2>
 
           <div class='profile'>
-            <img src='http://farm${pic.farm}.staticflickr.com/${pic.server}/buddyicons/${pic.owner}.jpg' alt=${pic.owner} /> <span>${pic.owner}</span>
+            <img src='http://farm${pic.farm}.staticflickr.com/${pic.server}/buddyicons/${pic.owner}.jpg' alt=${pic.owner} /> <span class='userID'>${pic.owner}</span>
           </div>
         </li>
       `;
