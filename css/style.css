@@ -71,17 +71,18 @@ main .controls article input {
   border-radius: 3px;
 }
 main .controls article button {
-  width: 100px;
+  width: 80px;
   height: 25px;
   background: #444;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
-  font: 0.6rem/25px "orbitron";
+  font: 600 0.6rem/25px "orbitron";
   color: #fff;
   text-align: center;
   border: none;
   position: relative;
   top: -1px;
   border-radius: 3px;
+  letter-spacing: 1px;
 }
 main .list {
   width: 100%;
