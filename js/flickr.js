@@ -1,4 +1,4 @@
-let dataType = "";
+let optString = "";
 const [btnMine, btnPopular] = document.querySelectorAll("nav button");
 const [_, inputSearch, btnSearch] = document.querySelector(".searchBox").children;
 
@@ -7,7 +7,6 @@ btnMine.addEventListener("click", () => fetchFlickr({ type: "mine" }));
 btnPopular.addEventListener("click", () => fetchFlickr({ type: "interest" }));
 
 btnSearch.addEventListener("click", () => {
-	//검색어를 입력하지 않고 검색버튼 클릭시 함수 강제 중지
 	if (!inputSearch.value) return;
 	fetchFlickr({ type: "search", tags: inputSearch.value });
 	inputSearch.value = "";
@@ -20,8 +19,13 @@ document.body.addEventListener("click", e => {
 });
 
 function fetchFlickr(opt) {
-	if (opt.type === dataType) return;
-	dataType = opt.type;
+	//참조링크 비교가 아닌 값 자체를 비교하기 위해서
+	//opt객체를 강제로 문자화해서 stringifyOpt변수에 저장
+	let stringifyOpt = JSON.stringify(opt);
+	//문자화된 옵션객체 자체를 비교처리
+	if (stringifyOpt === optString) return;
+	//문자화된 옵션 객체를 전역변수는 optString에 저장해서 다음번 비교에 사용
+	optString = stringifyOpt;
 
 	const api_key = "21e294ad0ec03a32d7355980457d9e11";
 	const baseURL = `https://www.flickr.com/services/rest/?api_key=${api_key}&method=`;
