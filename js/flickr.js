@@ -54,6 +54,11 @@ function createList(dataArr) {
 
   list.innerHTML = tags;
 
+  setDefImg();
+}
+
+//이미지 엑박시 대체이미지 연결 함수
+function setDefImg() {
   const profilePic = document.querySelectorAll(".profile img");
   console.log(profilePic);
 
@@ -87,7 +92,5 @@ function removeModal() {
 }
 
 //미션
-//- createList()라는 함수를 생성
-//- fetchFlickr함수에서 동적 리스트 생성하는 코드를 createList함수로 분리
-//- 인수로 데이터 배열을 전달받아 목록 출력
-//-9시 25분 까지
+//createList안쪽에서 프로필 이미지 엑박시 대체이미지 바꿔치키 하는 기능을 또다른 함수로 분리
+//setDefaultImage() - 9시 40분까지 고민
